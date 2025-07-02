@@ -1,0 +1,624 @@
+/*
+Template Name: finadvisor
+Description: HTML5 / CSS3 One Page
+Version: 1.0
+Author: uiCookies.com
+*/
+
+
+:root {
+    --accent-light-color: #83a6d2;
+    --accent-color: #164d86;
+    --accent-dark-color: #973e3e;
+    --accent-really-dark-color: #471515; 
+  }
+  
+
+body {
+    /* font-family: 'Roboto', sans-serif; */
+    font-size: 19px;
+    line-height: 1.7em;
+    color: #483636; 
+    font-weight: 100;
+    background: #ffffff;
+    border: 10px solid #fff;
+}
+
+/* --------------------------------------
+ * Global Typography
+ *------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    color: var(--accent-really-dark-color);
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 1.2em;
+    font-weight: 700;
+    color: var(--accent-light-color);
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 1.5em;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 1.5em;
+    font-weight: 300;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 1.5em;
+    font-weight: 300;
+}
+
+h5 {
+    font-size: 16px;
+    line-height: 1.5em;
+    font-weight: 500;
+}
+
+h6 {
+    font-size: 15px;
+    line-height: 24px;
+}
+
+/* --------------------------------------
+ * LINK STYLE
+ *------------------------------------------*/
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+a,
+a:active,
+a:focus {
+    text-decoration: none;
+    outline: none
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+p.lead {
+    font-size: 19px;
+    line-height: 1.7em;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*Button Style*/
+.btn {
+    padding: 10px 30px;
+    margin-bottom: 0;
+    font-size: 16px;
+    border-radius: 0;
+    font-weight: 500;
+    border-width: 2px;
+    text-transform: uppercase;
+}
+
+.btn-lg {
+    font-size: 18px;
+    padding: 15px 30px
+}
+
+/*btn-primary*/
+.btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active:focus {
+    background: transparent;
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+/*btn-default*/
+.btn-default {
+    color: #ffffff; 
+    background-color: transparent;
+    border-color: #ffffff;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active:focus {
+    background-color: transparent;
+    color: var(--accent-dark-color);
+    border-color: var(--accent-dark-color);
+}
+
+button:focus,
+.btn:focus,
+.btn:active:focus {
+    outline: none;
+}
+
+/* --------------------
+ * Section Background
+ * -------------------*/
+
+.gray-bg {
+    background-color: #f0f1f3;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.white-bg {
+    background-color: #ffffff;
+}
+
+/* --------------------
+ *  main Wrapper
+ * -------------------*/
+#main-wrapper {
+    background: #ffffff;
+    overflow: hidden;
+}
+
+/*-------------------
+ * Committee
+ *-------------------*/
+
+.team .thumbnail {
+    padding: 0;
+    line-height: 22px;
+    background-color: transparent;
+    border: 0;
+    margin-bottom: 30px;
+}
+
+@media (max-width : 767px) {
+    .team .thumbnail {
+        margin-bottom: 30px;
+    }
+}
+
+.team .thumbnail img {
+    width: 100%;
+}
+
+.team .thumbnail .caption {
+    padding: 10px;
+}
+
+.team .thumbnail h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 5px;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+
+
+
+.team .thumbnail h3 small {
+    font-size: 13px;
+    color: #888;
+    display: block;
+    font-weight: normal;
+}
+
+/*---------------------------
+ * Section Wrapper
+ *---------------------------*/
+.section-wrapper {
+    padding: 100px 0;
+}
+
+/*---------------------------
+ * Section Title
+ *---------------------------*/
+.section-title {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.section-title h1 {
+    margin-bottom: 5px;
+}
+
+.section-title p {
+    font-size: 18px;
+    color: #888888;
+}
+
+
+/* --------------------------
+ * Agenda
+ *---------------------------*/
+.section-ajenda .session {
+    padding: 15px 0;
+    border-left: 1px solid #eeeeee;
+    margin-bottom: 40px;
+}
+
+.section-ajenda .session time {
+    padding: 5px 25px 15px;
+    border-bottom: 1px solid #eeeeee;
+    display: inline-block;
+}
+
+.section-ajenda .session h2 {
+    margin: 20px 0 0 20px;
+}
+
+.section-ajenda .session h3 {
+    margin: 20px 0 20px 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.section-ajenda .session h3 span {
+    font-size: 14px;
+    display: block;
+    line-height: 1;
+}
+
+/* --------------------------------------------
+ *   Footer
+ *---------------------------------------------- */
+
+/* Copyright */
+
+.footer .copyright-section {
+    font-size: 13px;
+    background-color: var(--accent-light-color);
+    color: white;
+    padding: 30px 0;
+}
+
+.footer .copyright-section .copytext {
+    font-weight: 400;
+    display: block;
+}
+
+/* ---------------------------------------------- /*
+ * Preloader
+/* ---------------------------------------------- */
+#preloader {
+    background: #ffffff;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+#status,
+.status-mes {
+    background-image: url(../img/preloader.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    left: 50%;
+    margin: -100px 0 0 -100px;
+    position: absolute;
+    top: 50%;
+    width: 200px;
+}
+
+.status-mes {
+    background: none;
+    left: 0;
+    margin: 0;
+    text-align: center;
+    top: 65%;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+hr {
+    border: none;
+    border-top: 5px double #333;
+    color: #333;
+    overflow: visible;
+    text-align: center;
+    height: 7px;
+    /* padding-bottom: 2em; */
+    /* padding-top: 2em; */
+}
+
+hr:after {
+    background: #fff;
+    padding: 0 4px;
+    position: relative;
+    top: -13px;
+}
+
+/* pubs CSS */
+
+.pubs_img {
+    border-style: solid !important;
+    border-width: 1px !important;
+    display: block;
+    width: 100%;
+}
+
+.paper-title {
+    vertical-align: top; 
+    padding-left: 3px; 
+    padding-top: 1em !important;
+}
+
+.pubs_title {
+    /* font-family: 'CMUSansSerif'; */
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.pubs_title_a {
+    text-decoration: none;
+    border: none;
+    /* font-family: 'CMUSansSerif'; */
+    font-size: 16pt;
+}
+
+.pubs_content {
+    /* font-family: 'CMUSansSerif'; */
+    font-size: 16pt;
+}
+
+.pub-abstract {
+    text-align: justify;
+    font-weight: normal;
+}
+
+.image-holder {
+    float: left;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.pub-text {
+    padding-top: 2em;
+}
+
+.abstract {
+    padding-top: 0.5em;
+}
+
+
+/* ---------------------------------------------- /*
+ * Custom classes
+/* ---------------------------------------------- */
+
+.hero-bold {
+    width: 100%;
+    background-color: #83a6d2;
+    text-align: center;
+    padding-top: 75px;
+    padding-bottom: 50px;
+}
+
+.workshop-header {
+    font-weight: 800;
+    font-size: 4em;
+    color: white;
+}
+
+.workshop-name {
+    font-weight: 400;
+    font-size: 2em;
+    color: white;
+}
+
+@media screen and (max-width: 576px) {
+    .workshop-header {
+        font-size: 3em;
+    }
+
+    .workshop-name {
+        font-size: 1.5em;
+    }
+}
+
+.event-date {
+    font-weight: 400;
+    font-size: 1.5em;
+    color: white;
+    margin-top: 100px;
+}
+
+.co-location {
+    font-weight: 400;
+    font-size: 1.5em;
+    color: white;
+}
+
+.committee-name {
+    line-height: 1em;
+}
+
+.affiliation {
+    line-height: 1em;
+    font-weight: 100;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+.nav-container {
+    background-color: var(--accent-light-color) !important;
+    border-top: white 1px solid;
+    border-bottom: white 1px solid;
+}
+
+.navbar-collapse > * > li:not(:last-child) {
+    margin-right: 150px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 300;
+    color: white;
+}
+
+.nav-link:hover,
+.nav-link:active {
+    text-decoration: none; 
+    color: var(--accent-color);
+}
+
+.navbar-toggler {
+    margin-left: 0.5em;
+    border-color: white;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+@media (max-width: 992px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+        width: 100%;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-collapse > * > li {
+        width: 100%;
+        margin: auto 0 !important;
+        padding: 0.25em 0;
+        font-size: 1.25em;
+    }
+}
+
+
+.text-block > p {
+    text-align: justify;
+}
+
+.dates {
+    width: auto;
+    margin: 0px auto;
+}
+
+
+.dates > tbody > tr > td:first-child {
+    text-align: right;
+    vertical-align: top;
+    padding-right: 1em;
+}
+
+.dates > tbody > tr > td:last-child {
+    text-align: left;
+    padding-left: 1em;
+}
+
+.dates-md {
+    display: none;
+}
+
+.dates-md > tbody > tr > td:first-child {
+    text-align: right;
+    vertical-align: top;
+    padding-right: 1em;
+}
+
+.dates-sm {
+    display: none;
+    text-align: center;
+}
+
+.dates-sm > p {
+    margin: 0;
+}
+
+.dates-sm > .download-icon-text {
+    margin-bottom: 25px;
+}
+
+@media screen and (max-width: 768px) {
+    .dates {
+        display: none;
+    }
+
+    .dates-md {
+        display: table;
+    }
+
+    .dates-sm {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .dates {
+        display: none;
+    }
+
+    .dates-md {
+        display: none;
+    }
+
+    .dates-sm {
+        display: inline;
+    }
+}
+
+.toi-list {
+    margin-top: -10px;
+    margin-bottom: 25px;
+    padding-left: 100px;
+    list-style-type:circle;
+}
+
+.maintenance {
+   text-align: center; 
+}
+
+.maintenance::before {
+    content: "<<<";
+}
+
+.maintenance::after {
+    content: ">>>";
+}
+
+.download-icon-text {
+    font-size: 0.8em;
+}
+
+.download-icon-text > a {
+    font-size: 1.25em;
+}
