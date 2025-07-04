@@ -1,27 +1,21 @@
-/*
-Template Name: finadvisor
-Description: HTML5 / CSS3 One Page
-Version: 1.0
-Author: uiCookies.com
-*/
-
 
 :root {
-    --accent-light-color: #83a6d2;
-    --accent-color: #164d86;
-    --accent-dark-color: #973e3e;
-    --accent-really-dark-color: #471515; 
-  }
-  
+    --primary-color: #194D33;
+    --secondary-color: #88BDA5;
+    --contrast-color: white;
+    --link-color: var(--primary-color);
+    --link-hover-color: #B46B3B;
+    --odd-bg-color: #E8E8E8;
+    --even-bg-color: white;
+}  
 
 body {
-    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Verdana', sans-serif;
     font-size: 19px;
     line-height: 1.7em;
-    color: #483636; 
+    color: black;
     font-weight: 100;
     background: #ffffff;
-    border: 10px solid #fff;
 }
 
 /* --------------------------------------
@@ -35,14 +29,13 @@ h4,
 h5,
 h6 {
     margin: 0 0 15px;
-    color: var(--accent-really-dark-color);
+    color: var(--primary-color);
 }
 
 h1 {
     font-size: 36px;
     line-height: 1.2em;
     font-weight: 700;
-    color: var(--accent-light-color);
 }
 
 h2 {
@@ -74,11 +67,19 @@ h6 {
     line-height: 24px;
 }
 
+b {
+    font-weight: bold !important;
+}
+
+ol {
+    padding-left: 40px !important;
+}
+
 /* --------------------------------------
  * LINK STYLE
  *------------------------------------------*/
 a {
-    color: var(--accent-color);
+    color: var(--link-color);
     text-decoration: none;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
@@ -88,14 +89,17 @@ a {
 
 a,
 a:active,
-a:focus {
+a:focus,
+a:active {
     text-decoration: none;
-    outline: none
+    outline: none;
+    color: var(--link-color);
 }
 
 a:hover,
 a:focus {
-    text-decoration: underline;
+    text-decoration: none;
+    color: var(--link-hover-color);
 }
 
 p {
@@ -107,88 +111,199 @@ p.lead {
     line-height: 1.7em;
 }
 
+p.text-block {
+    text-align: justify;
+}
+
 ul {
     margin: 0;
     padding: 0;
-    list-style: none;
+    margin-left: 40px;
 }
 
-/*Button Style*/
-.btn {
-    padding: 10px 30px;
-    margin-bottom: 0;
-    font-size: 16px;
-    border-radius: 0;
-    font-weight: 500;
-    border-width: 2px;
-    text-transform: uppercase;
-}
-
-.btn-lg {
-    font-size: 18px;
-    padding: 15px 30px
-}
-
-/*btn-primary*/
-.btn-primary {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
-}
-
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active:focus {
-    background: transparent;
-    color: var(--accent-color);
-    border-color: var(--accent-color);
-}
-
-/*btn-default*/
-.btn-default {
-    color: #ffffff; 
-    background-color: transparent;
-    border-color: #ffffff;
-}
-
-.btn-default:hover,
-.btn-default:focus,
-.btn-default:active:focus {
-    background-color: transparent;
-    color: var(--accent-dark-color);
-    border-color: var(--accent-dark-color);
-}
-
-button:focus,
-.btn:focus,
-.btn:active:focus {
-    outline: none;
-}
-
-/* --------------------
- * Section Background
- * -------------------*/
-
-.gray-bg {
-    background-color: #f0f1f3;
-    border-top: 1px solid #eeeeee;
-    border-bottom: 1px solid #eeeeee;
-}
-
-.white-bg {
-    background-color: #ffffff;
-}
-
-/* --------------------
- *  main Wrapper
- * -------------------*/
 #main-wrapper {
     background: #ffffff;
     overflow: hidden;
 }
 
-/*-------------------
- * Committee
- *-------------------*/
+.navbar-brand,
+.navbar-brand:focus {
+    padding-top: 10px;
+    font-size: 2em;
+    font-weight: 1000;
+    margin: 2px 25px 2px 0 !important;
+    color: var(--primary-color);
+}
+
+.navbar-brand:hover,
+.navbar-brand:active {
+    color: var(--link-hover-color);
+}
+
+.navbar {
+    border-radius: 0;
+    background: var(--secondary-color);
+    margin: 0;
+}
+
+.main-menu .navbar-right {
+    margin-right: -15px;
+}
+
+.navbar-nav {
+    text-align: center;
+}
+
+.navbar-collapse {
+    border: none;
+    border-radius: 0;
+}
+
+.nav-link {
+    color: var(--contrast-color);
+    font-weight: 600;
+    padding: 15px 0 15px 30px;
+    text-transform: uppercase;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+    color: var(--link-hover-color) !important;
+    background: transparent;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:active,
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-bars {
+    color: var(--contrast-color);
+    font-size: 1.5em;
+}
+
+.dropdown-menu {
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 0;
+}
+
+.dropdown-item {
+    color: var(--contrast-color);
+}
+
+.dropdown-item:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.header {
+     height: 50vh;
+     min-height: 500px;
+     color: #ffffff;
+     background-color: #E8E8E8;
+     background-position: 20% 20%;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+.header h1 {
+    color: var(--secondary-color);
+    font-weight: 1000;
+    font-size: 4em;
+}
+
+.header p.lead {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.5em;
+}
+
+.header .co-located {
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    margin-top: -20px;
+}
+
+.header .quote {
+    font-size: 24px !important;
+    margin-top: 5vh;
+}
+
+.header a {
+    color: var(--secondary-color);
+}
+
+.header-content {
+    backdrop-filter: blur(5px);
+}
+
+
+@media (max-width : 600px) {
+    .header {
+        min-height: 300px;
+    }
+
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .header p.lead {
+        font-size: 22px;
+    }
+
+    .header .quote {
+        display: none;
+    }
+}
+
+#main-wrapper > section:nth-child(odd) {
+    background-color: var(--odd-bg-color);
+}
+
+#main-wrapper > section:nth-child(even) {
+    background-color: var(--even-bg-color);
+    border-top: 1px solid var(--even-bg-color);
+    border-bottom: 1px solid var(--even-bg-color);
+}
+
+.section-wrapper {
+    padding: 100px 10px;
+}
+
+.section-title {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.section-title h1 {
+    margin-bottom: 5px;
+}
+
+.section-title p {
+    font-size: 18px;
+    color: #888888;
+}
+
+.about-event .lead {
+    font-size: 19px;
+    line-height: 1.7em;
+}
+
+.about-event address {
+    font-size: 15px;
+    color: #888888;
+    line-height: 1.8em;
+}
+
+.about-event address strong {
+    color: var(--accent-really-dark-color);
+}
 
 .team .thumbnail {
     padding: 0;
@@ -215,12 +330,11 @@ button:focus,
 .team .thumbnail h3 {
     font-size: 16px;
     font-weight: bold;
-    margin: 0 5px;
+
+    margin: 0 40px;
     text-transform: uppercase;
     padding: 10px 0;
 }
-
-
 
 .team .thumbnail h3 small {
     font-size: 13px;
@@ -229,34 +343,26 @@ button:focus,
     font-weight: normal;
 }
 
-/*---------------------------
- * Section Wrapper
- *---------------------------*/
-.section-wrapper {
-    padding: 100px 0;
+.team .social-links li {
+    display: inline-block;
+    margin-right: 3px;
 }
 
-/*---------------------------
- * Section Title
- *---------------------------*/
-.section-title {
-    margin-bottom: 60px;
-    text-align: center;
+.team .social-links li:last-child {
+    margin-right: 0;
 }
 
-.section-title h1 {
-    margin-bottom: 5px;
+.team .social-links li a {
+    display: block;
+    font-size: 24px;
+    color: #ccc;
+    padding: 0 5px;
 }
 
-.section-title p {
-    font-size: 18px;
-    color: #888888;
+.team .social-links li a:hover {
+    color: #38A1F3;
 }
 
-
-/* --------------------------
- * Agenda
- *---------------------------*/
 .section-ajenda .session {
     padding: 15px 0;
     border-left: 1px solid #eeeeee;
@@ -285,16 +391,16 @@ button:focus,
     line-height: 1;
 }
 
-/* --------------------------------------------
- *   Footer
- *---------------------------------------------- */
 
 /* Copyright */
 
+.footer {
+    background-color: var(--secondary-color);
+}
+
 .footer .copyright-section {
     font-size: 13px;
-    background-color: var(--accent-light-color);
-    color: white;
+    color: var(--contrast-color);
     padding: 30px 0;
 }
 
@@ -362,21 +468,47 @@ hr:after {
 
 /* pubs CSS */
 
+.affil {
+    font-size: 0.8em;
+    font-weight: 400;
+}
+
+.speaker-img {
+    width: 32%;
+}
+
+.talk-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    vertical-align: bottom;
+    margin-bottom: 10px;
+}
+
+.speaker {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+.speaker-bio {
+    padding-left: 20px;
+    vertical-align: top;
+}
+
 .pubs_img {
     border-style: solid !important;
     border-width: 1px !important;
     display: block;
     width: 100%;
+    margin: 10px 20px 10px 0;
 }
 
 .paper-title {
     vertical-align: top; 
     padding-left: 3px; 
-    padding-top: 1em !important;
+    margin-top: 10px;
 }
 
 .pubs_title {
-    /* font-family: 'CMUSansSerif'; */
     font-size: 1.3em;
     font-weight: bold;
 }
@@ -384,18 +516,11 @@ hr:after {
 .pubs_title_a {
     text-decoration: none;
     border: none;
-    /* font-family: 'CMUSansSerif'; */
     font-size: 16pt;
 }
 
 .pubs_content {
-    /* font-family: 'CMUSansSerif'; */
     font-size: 16pt;
-}
-
-.pub-abstract {
-    text-align: justify;
-    font-weight: normal;
 }
 
 .image-holder {
@@ -410,122 +535,41 @@ hr:after {
 
 .abstract {
     padding-top: 0.5em;
-}
-
-
-/* ---------------------------------------------- /*
- * Custom classes
-/* ---------------------------------------------- */
-
-.hero-bold {
-    width: 100%;
-    background-color: #83a6d2;
-    text-align: center;
-    padding-top: 75px;
-    padding-bottom: 50px;
-}
-
-.workshop-header {
-    font-weight: 800;
-    font-size: 4em;
-    color: white;
-}
-
-.workshop-name {
-    font-weight: 400;
-    font-size: 2em;
-    color: white;
-}
-
-@media screen and (max-width: 576px) {
-    .workshop-header {
-        font-size: 3em;
-    }
-
-    .workshop-name {
-        font-size: 1.5em;
-    }
-}
-
-.event-date {
-    font-weight: 400;
-    font-size: 1.5em;
-    color: white;
-    margin-top: 100px;
-}
-
-.co-location {
-    font-weight: 400;
-    font-size: 1.5em;
-    color: white;
-}
-
-.committee-name {
-    line-height: 1em;
-}
-
-.affiliation {
-    line-height: 1em;
-    font-weight: 100;
-    font-size: 0.8em;
-    text-transform: uppercase;
-}
-
-.nav-container {
-    background-color: var(--accent-light-color) !important;
-    border-top: white 1px solid;
-    border-bottom: white 1px solid;
-}
-
-.navbar-collapse > * > li:not(:last-child) {
-    margin-right: 150px;
-}
-
-.nav-link {
-    text-decoration: none;
-    font-size: 1em;
-    font-weight: 300;
-    color: white;
-}
-
-.nav-link:hover,
-.nav-link:active {
-    text-decoration: none; 
-    color: var(--accent-color);
-}
-
-.navbar-toggler {
-    margin-left: 0.5em;
-    border-color: white;
-}
-
-.navbar-toggler:focus {
-    box-shadow: none;
-}
-
-@media (max-width: 992px) {
-    .navbar .navbar-nav {
-        display: inline-block;
-        float: none;
-        vertical-align: top;
-        width: 100%;
-    }
-
-    .navbar .navbar-collapse {
-        text-align: center;
-    }
-
-    .navbar-collapse > * > li {
-        width: 100%;
-        margin: auto 0 !important;
-        padding: 0.25em 0;
-        font-size: 1.25em;
-    }
-}
-
-
-.text-block > p {
     text-align: justify;
+    border: none;
+}
+
+.time {
+    background-color: var(--accent-dark-color);
+    color: white;
+    font-weight: 600;
+    font-size: 1.5em;
+    margin: 20px 0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.agenda-point {
+    font-size: 1.5em;
+    margin: 20px 0;
+    padding: 10px 0 10px 20px;
+    font-weight: 600;
+    color: var(--accent-dark-color);
+    box-shadow: 0px -5px 0px var(--accent-dark-color) inset;
+}
+
+.agenda-title {
+    font-size: 1em;
+}
+
+.team .thumbnail h3 small {
+    line-height: 1em;
+}
+
+.prev-editions {
+    margin: 0 auto;
+    min-width: 300px;
+    width: 50%;
 }
 
 .dates {
@@ -594,31 +638,4 @@ hr:after {
     .dates-sm {
         display: inline;
     }
-}
-
-.toi-list {
-    margin-top: -10px;
-    margin-bottom: 25px;
-    padding-left: 100px;
-    list-style-type:circle;
-}
-
-.maintenance {
-   text-align: center; 
-}
-
-.maintenance::before {
-    content: "<<<";
-}
-
-.maintenance::after {
-    content: ">>>";
-}
-
-.download-icon-text {
-    font-size: 0.8em;
-}
-
-.download-icon-text > a {
-    font-size: 1.25em;
 }

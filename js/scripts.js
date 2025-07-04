@@ -45,10 +45,11 @@ jQuery(function ($) {
 
     (function () {
         $('.navbar-collapse ul li a').on('click', function () {
+            console.log("clicked");
             if ($(this).attr('class') != 'dropdown-toggle active' && $(this).attr('class') != 'dropdown-toggle') {
+                console.log("if");
                 $('.navbar-toggler:visible').trigger('click');
             }
         });
     }());
 }); // JQuery end
-
