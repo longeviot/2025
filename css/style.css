@@ -206,6 +206,8 @@ ul {
      height: 50vh;
      min-height: 500px;
      color: #ffffff;
+     background: url('../img/wien.jpeg') no-repeat center center;
+     background-size: cover;
      background-color: #E8E8E8;
      background-position: 20% 20%;
      background-repeat: no-repeat;
@@ -240,7 +242,14 @@ ul {
 }
 
 .header-content {
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 12px;
+    max-width: 1000px;      /* set your desired max width */
+    margin: 0 auto;        /* center horizontally */
+    padding: 2em 2em;  
+    max-height: 500px; 
+    
 }
 
 
