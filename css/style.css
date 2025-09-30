@@ -482,8 +482,15 @@ hr:after {
     font-weight: 400;
 }
 
+/*.speaker-img {*/
+/*    width: 32%;*/
+/*}*/
+
+/* Make keynote headshot fill its column nicely */
 .speaker-img {
-    width: 32%;
+    width: 100%;
+    max-width: 320px;      /* optional cap so it doesn’t get huge on desktops */
+    border-radius: 8px;    /* optional: soft corners */
 }
 
 .talk-title {
