@@ -556,7 +556,7 @@ hr:after {
 }
 
 .time {
-    background-color: var(--accent-dark-color);
+    background-color: var(--primary-color);
     color: white;
     font-weight: 600;
     font-size: 1.5em;
@@ -570,8 +570,8 @@ hr:after {
     margin: 20px 0;
     padding: 10px 0 10px 20px;
     font-weight: 600;
-    color: var(--accent-dark-color);
-    box-shadow: 0px -5px 0px var(--accent-dark-color) inset;
+    color: var(--primary-color);
+    box-shadow: 0px -5px 0px var(--primary-color) inset;
 }
 
 .agenda-title {
@@ -654,4 +654,55 @@ hr:after {
     .dates-sm {
         display: inline;
     }
+}
+
+.btn {
+    padding: 10px 30px;
+    margin-bottom: 0;
+    font-size: 16px;
+    border-radius: 0;
+    font-weight: 500;
+    border-width: 2px;
+    text-transform: uppercase;
+}
+
+.btn-lg {
+    font-size: 18px;
+    padding: 15px 30px
+}
+
+/*btn-primary*/
+.btn-primary {
+    border-color: var(--accent-color-dark);
+    background: transparent;
+    color: var(--accent-color-dark);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active:focus {
+    background: var(--accent-highlight);
+    color: var(--accent-color-dark);
+    border-color: var(--accent-color-dark);
+}
+
+/*btn-default*/
+.btn-default {
+    color: #ffffff; 
+    background-color: transparent;
+    border-color: #ffffff;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active:focus {
+    background-color: transparent;
+    color: var(--accent-color-dark);
+    border-color: var(--accent-color-dark);
+}
+
+button:focus,
+.btn:focus,
+.btn:active:focus {
+    outline: none;
 }
